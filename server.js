@@ -20,6 +20,11 @@ app.use("/apis/recipe", recipeRoutes);
 app.use("/apis/user", userRoutes);
 
 
+app.get("/test", (req, res)=>{
+  res.send("Home Page")
+})
+
+
 // connect to db
 mongoose
   .connect(process.env.MONGO_URI)
